@@ -33,6 +33,17 @@ WARNING!!! WARNING!!!
 // (Note, Step 2 will be done in the SpeakHello.js file.)
 (function () {
 
+    var byeSpeaker = {}
+    byeSpeaker.speak = function (name) {
+        console.log("Good Bye" + " " + name);
+    };
+    
+    var helloSpeaker = {}
+    helloSpeaker.speak = function (name) {
+        console.log("Hello" + " " + name);
+    };
+
+
     var names = ["Yaakov", "John", "Jen", "Jason", "Paul", "Frank", "Larry", "Paula", "Laura", "Jim"];
     
     // STEP 10: (NOTHING TO DO. ALREADY DONE FOR YOU)
@@ -56,12 +67,10 @@ WARNING!!! WARNING!!!
       // in the loop. Otherwise, call helloSpeaker's 'speak' method with the current
       // name in the loop.
       if (firstLetter === 'j') {
-        
-        console.log('Goodbye' + names[i]);
+        byeSpeaker.speak(names[i]);
       } 
       else {
-        
-        console.log('Hello' + names[i]);
+        helloSpeaker.speak(names[i]);
       }
     }
     
